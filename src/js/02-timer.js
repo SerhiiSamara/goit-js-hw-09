@@ -8,7 +8,18 @@ const refs = {
   hoursOutput: document.querySelector('[data-hours]'),
   minutesOutput: document.querySelector('[data-minutes]'),
   secondsOutput: document.querySelector('[data-seconds]'),
+  timerContainer: document.querySelector('.timer'),
 };
+
+refs.timerContainer.style.display = 'flex';
+refs.timerContainer.style.justifyContent = 'center';
+refs.timerContainer.style.fontSize = '24px';
+refs.timerContainer.style.color = 'grey';
+refs.btnStart.style.marginBottom = '40px';
+refs.daysOutput.style.display = 'block';
+refs.hoursOutput.style.display = 'block';
+refs.minutesOutput.style.display = 'block';
+refs.secondsOutput.style.display = 'block';
 
 let userDate = null;
 const options = {
