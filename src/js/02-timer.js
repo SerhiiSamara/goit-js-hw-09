@@ -9,7 +9,13 @@ const refs = {
   minutesOutput: document.querySelector('[data-minutes]'),
   secondsOutput: document.querySelector('[data-seconds]'),
   timerContainer: document.querySelector('.timer'),
+  inputEl: document.querySelector('input'),
 };
+
+refs.inputEl.style.display = 'block';
+refs.inputEl.style.marginRight = 'auto';
+refs.inputEl.style.marginLeft = 'auto';
+refs.inputEl.style.fontSize = '30px';
 
 refs.timerContainer.style.display = 'flex';
 refs.timerContainer.style.justifyContent = 'space-around';
@@ -19,7 +25,14 @@ refs.timerContainer.style.fontSize = '30px';
 refs.timerContainer.style.fontWeight = 'bold';
 refs.timerContainer.style.color = 'grey';
 
+refs.btnStart.style.display = 'block';
+refs.btnStart.style.margin = 'auto';
 refs.btnStart.style.marginBottom = '40px';
+refs.btnStart.style.marginTop = '100px';
+refs.btnStart.style.width = '150px';
+refs.btnStart.style.fontSize = '40px';
+refs.btnStart.style.color = 'red';
+refs.btnStart.style.heigt = '100px';
 
 refs.daysOutput.style.display = 'block';
 refs.daysOutput.style.textAlign = 'center';
