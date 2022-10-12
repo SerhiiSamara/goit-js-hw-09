@@ -12,13 +12,20 @@ const refs = {
 };
 
 refs.timerContainer.style.display = 'flex';
-refs.timerContainer.style.justifyContent = 'center';
-refs.timerContainer.style.fontSize = '24px';
+refs.timerContainer.style.justifyContent = 'space-around';
+refs.timerContainer.style.width = '600px';
+refs.timerContainer.style.margin = 'auto';
+refs.timerContainer.style.fontSize = '30px';
 refs.timerContainer.style.color = 'grey';
 refs.btnStart.style.marginBottom = '40px';
 refs.daysOutput.style.display = 'block';
+refs.daysOutput.style.textAlign = 'center';
+refs.daysOutput.style.marginLeft = 'block';
+refs.hoursOutput.style.textAlign = 'center';
 refs.hoursOutput.style.display = 'block';
+refs.minutesOutput.style.textAlign = 'center';
 refs.minutesOutput.style.display = 'block';
+refs.secondsOutput.style.textAlign = 'center';
 refs.secondsOutput.style.display = 'block';
 
 let userDate = null;
