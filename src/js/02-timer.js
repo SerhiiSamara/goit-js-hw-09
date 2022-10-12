@@ -2,11 +2,14 @@ import flatpick from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 const flatpickr = require('flatpickr');
-const btnStart = document.querySelector('button[data-start]');
-const daysOutput = document.querySelector('[data-days]');
-const hoursOutput = document.querySelector('[data-hours]');
-const minutesOutput = document.querySelector('[data-minutes]');
-const secondsOutput = document.querySelector('[data-seconds]');
+const refs = {
+  btnStart: document.querySelector('button[data-start]'),
+  daysOutput: document.querySelector('[data-days]'),
+  hoursOutput: document.querySelector('[data-hours]'),
+  minutesOutput: document.querySelector('[data-minutes]'),
+  secondsOutput: document.querySelector('[data-seconds]'),
+};
+
 let userDate = null;
 const options = {
   enableTime: true,
@@ -24,16 +27,16 @@ const options = {
       );
       return;
     } else {
-      btnStart.disabled = !btnStart.disabled;
+      refs.btnStart.disabled = !refs.btnStart.disabled;
     }
-    btnStart.addEventListener('click', onClickBtnStart);
+    refs.btnStart.addEventListener('click', onClickBtnStart);
   },
 };
-
-btnStart.disabled = !btnStart.disabled;
+refs.btnStart.disabled = !refs.btnStart.disabled;
 flatpick('input[type="text"]', options);
 
 function onClickBtnStart() {
+  refs.btnStart.disabled = !refs.btnStart.disabled;
   const itervalId = setInterval(() => {
     const currentDate = Date.now();
     const userTime = userDate - currentDate;
@@ -42,10 +45,10 @@ function onClickBtnStart() {
       return;
     }
     const userTimeFormat = convertMs(userTime);
-    daysOutput.textContent = addLeadingZero(userTimeFormat.days);
-    hoursOutput.textContent = addLeadingZero(userTimeFormat.hours);
-    minutesOutput.textContent = addLeadingZero(userTimeFormat.minutes);
-    secondsOutput.textContent = addLeadingZero(userTimeFormat.seconds);
+    refs.daysOutput.textContent = addLeadingZero(userTimeFormat.days);
+    refs.hoursOutput.textContent = addLeadingZero(userTimeFormat.hours);
+    refs.minutesOutput.textContent = addLeadingZero(userTimeFormat.minutes);
+    refs.secondsOutput.textContent = addLeadingZero(userTimeFormat.seconds);
   }, 1000);
 }
 
