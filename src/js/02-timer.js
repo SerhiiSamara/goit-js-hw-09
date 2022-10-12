@@ -16,17 +16,26 @@ refs.timerContainer.style.justifyContent = 'space-around';
 refs.timerContainer.style.width = '600px';
 refs.timerContainer.style.margin = 'auto';
 refs.timerContainer.style.fontSize = '30px';
+refs.timerContainer.style.fontWeight = 'bold';
 refs.timerContainer.style.color = 'grey';
+
 refs.btnStart.style.marginBottom = '40px';
+
 refs.daysOutput.style.display = 'block';
 refs.daysOutput.style.textAlign = 'center';
-refs.daysOutput.style.marginLeft = 'block';
+refs.daysOutput.style.fontSize = '50px';
+
 refs.hoursOutput.style.textAlign = 'center';
 refs.hoursOutput.style.display = 'block';
+refs.hoursOutput.style.fontSize = '50px';
+
 refs.minutesOutput.style.textAlign = 'center';
 refs.minutesOutput.style.display = 'block';
+refs.minutesOutput.style.fontSize = '50px';
+
 refs.secondsOutput.style.textAlign = 'center';
 refs.secondsOutput.style.display = 'block';
+refs.secondsOutput.style.fontSize = '50px';
 
 let userDate = null;
 const options = {
