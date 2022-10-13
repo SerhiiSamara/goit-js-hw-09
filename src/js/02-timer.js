@@ -13,8 +13,7 @@ const refs = {
 };
 
 refs.inputEl.style.display = 'block';
-refs.inputEl.style.marginRight = 'auto';
-refs.inputEl.style.marginLeft = 'auto';
+refs.inputEl.style.margin = 'auto';
 refs.inputEl.style.fontSize = '30px';
 
 refs.timerContainer.style.display = 'flex';
